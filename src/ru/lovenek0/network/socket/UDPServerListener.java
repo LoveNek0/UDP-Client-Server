@@ -1,4 +1,4 @@
-package ru.lovenek0;
+package ru.lovenek0.network.socket;
 
 import java.net.DatagramPacket;
 

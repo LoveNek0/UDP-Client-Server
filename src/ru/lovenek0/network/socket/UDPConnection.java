@@ -1,4 +1,4 @@
-package ru.lovenek0;
+package ru.lovenek0.network.socket;
 
 public class UDPConnection {
     private final String host;
