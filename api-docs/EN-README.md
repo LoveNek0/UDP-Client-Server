@@ -4,6 +4,14 @@ API for applications using a UDP Ping-Pong connection
 ## Installation
 Add JAR file to project
 ## Examples
+### Examples of implementation:
+#### Client
+- [**Client.java**](/Examples/Client/Client.java)
+- [**ClientListener.java**](/Examples/Client/ClientListener.java)
+#### Server
+- [**Server.java**](/Examples/Server/Server.java)
+- [**ServerListener.java**](/Examples/Server/ServerListener.java)
+
 ### Server
 #### Server creation and launch
 ```java
