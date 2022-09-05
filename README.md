@@ -6,4 +6,4 @@ API for Client-Server apps, based on UDP Ping-Pong connection
 - [**English**](api-docs/EN-README.md)
 
 ## Other
-Author: [LoveNek0](https://t.me/lovenek0)
+Author: [LoveNek0](https://github.com/LoveNek0)
