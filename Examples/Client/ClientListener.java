@@ -1,4 +1,4 @@
-package ru.lovenek0.network.socket;
+package ru.lovenek0.network.PingPongUDP;
 
 import java.net.DatagramPacket;
 

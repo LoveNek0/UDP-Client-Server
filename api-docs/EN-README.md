@@ -39,7 +39,7 @@ server.SetDisconnectTimeout(5000);
 ```
 
 #### Installing an event handler
-The event handler class must implement the interface [UDPServerListener](/src/ru/lovenek0/network/socket/UDPServerListener.java)
+The event handler class must implement the interface [UDPServerListener](/src/ru/lovenek0/network/PingPongUDP/UDPServerListener.java)
 ```
 Listener listener = new Listener();
 server.SetListener(listener);
@@ -84,7 +84,7 @@ client.SetDisconnectTimeout(5000);
 ```
 
 #### Installing an event handler
-The event handler class must implement the interface [UDPClientListener](/src/ru/lovenek0/network/socket/UDPClientListener.java)
+The event handler class must implement the interface [UDPClientListener](/src/ru/lovenek0/network/PingPongUDP/UDPClientListener.java)
 ```
 Listener listener = new Listener();
 client.SetListener(listener);

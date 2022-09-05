@@ -40,7 +40,7 @@ server.SetDisconnectTimeout(5000);
 ```
 
 #### Установка обработчика событий
-Класс обработчика событий должен реализовывать интерфейс [UDPServerListener](/src/ru/lovenek0/network/socket/UDPServerListener.java)
+Класс обработчика событий должен реализовывать интерфейс [UDPServerListener](/src/ru/lovenek0/network/PingPongUDP/UDPServerListener.java)
 ```java
 Listener listener = new Listener();
 server.SetListener(listener);
@@ -85,7 +85,7 @@ client.SetDisconnectTimeout(5000);
 ```
 
 #### Установка обработчика событий
-Класс обработчика событий должен реализовывать интерфейс [UDPClientListener](/src/ru/lovenek0/network/socket/UDPClientListener.java)
+Класс обработчика событий должен реализовывать интерфейс [UDPClientListener](/src/ru/lovenek0/network/PingPongUDP/UDPClientListener.java)
 ```java
 Listener listener = new Listener();
 client.SetListener(listener);
