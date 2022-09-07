@@ -59,17 +59,17 @@ public class UDPClient {
     }
     public void disconnect(){
         connected = false;
-        this.SendPacket(new UDPPacket(-2, toSend));
+        this.sendPacket(new UDPPacket(-2, toSend));
         socket.disconnect();
         if(listener != null)
             listener.OnClientDroppedConnectionEvent();
     }
 
-    public void SendData(String data){
+    public void sendData(String data){
         this.toSend = data;
     }
 
-    public void SendPacket(byte[] bytes) {
+    public void sendPacket(byte[] bytes) {
         int size = Math.min(bytes.length, this.packetSize - 1);
         byte[] sendBytes = new byte[size + 1];
         System.arraycopy(bytes, 0, sendBytes, 0, size);
@@ -82,8 +82,8 @@ public class UDPClient {
                 listener.OnPacketNotSendEvent(new UDPPacket(bytes));
         }
     }
-    public void SendPacket(UDPPacket packet) {
-        SendPacket(packet.toBytes());
+    public void sendPacket(UDPPacket packet) {
+        sendPacket(packet.toBytes());
     }
 
     public void setListener(UDPClientListener listener){
@@ -133,7 +133,7 @@ public class UDPClient {
                 }
                 else {
                     UDPPacket packet = new UDPPacket(++this.lastClientPacketID, this.toSend);
-                    SendPacket(packet);
+                    sendPacket(packet);
                     this.toSend = "";
                     if(listener != null)
                         this.listener.OnPacketSendEvent(packet);
@@ -142,7 +142,7 @@ public class UDPClient {
                         this.socket.receive(receivePacket);
                         packet = new UDPPacket(receivePacket.getData());
                         if(packet.GetID() == -1){
-                            this.SendPacket(new UDPPacket(-1, toSend));
+                            this.sendPacket(new UDPPacket(-1, toSend));
                             this.connected = false;
                             this.socket.disconnect();
                             if(listener != null)
